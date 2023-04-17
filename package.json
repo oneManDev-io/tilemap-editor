@@ -1,0 +1,14 @@
+{
+  "name": "tilemap-editor-js",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">TileME</h1>",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.0.3"
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Create your tile map with this online Tile Map Editor" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+  <title>Tilemap Editor</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <header>
+        <h1>Tilemap Editor</h1>
+        <div class="file-menu">
+          <button class="button-as-link" onclick="clearCanvas()">Clear Canvas</button>
+          <div class="inputContainer">
+            <input class="inputfile" type="file" id="importJSON" name="importJSON">
+          </div>
+          <label for="file" class="inputLabel">Import JSON</label>
+          <!-- <button class="primary-button" onclick="importImage()">Import Image</button> -->
+          <button class="primary-button" onclick="exportImage()">Export Image</button>
+          <button class="primary-button" onclick="exportJSON()">Export JSON</button>
+        </div>
+      </header>
+      <div class="card_body">
+        <aside>
+          <label>Tiles</label>
+          <div class="tileset-container">
+            <img id="tileset-source" crossorigin />
+            <div class="tileset-container-selection"></div>
+          </div>
+        </aside>
+        <main class="card_right-column">
+          <canvas width="480" height="480"></canvas>
+
+          <p class="instructions">
+            <strong>Click</strong> to paint. <strong>Shift+Click</strong> to remove.
+            <strong>Ctrl+Click</strong> to copy. <strong>Alt+Click</strong> to undo.
+          </p>
+
+          <div>
+            <label>Editing Layer:</label>
+            <ul class="layers">
+              <li>
+                <button onclick="setLayer(2)" class="layer" tile-layer="2">Top Layer</button>
+                <span class="padlock" onclick="setLayerIsBlock(2)" padlock-layer="2"></span>
+              </li>
+              <li>
+                <button onclick="setLayer(1)" class="layer" tile-layer="1">Middle Layer</button>
+                <span class="padlock" onclick="setLayerIsBlock(1)" padlock-layer="1"></span>
+              </li>
+              <li>
+                <button onclick="setLayer(0)" class="layer" tile-layer="0">Bottom Layer</button>
+                <span class="padlock" onclick="setLayerIsBlock(0)" padlock-layer="0"></span>
+              </li>
+            </ul>
+            <small class="attribution">Made by
+              <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from
+              <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+            </small>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
