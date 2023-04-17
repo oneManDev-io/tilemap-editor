@@ -2,8 +2,20 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  color-scheme: dark;
+}
+
 html {
   height: 100%;
+}
+
+img {
+  /* image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast; */
+  image-rendering: pixelated !important;
 }
 
 body {
@@ -15,6 +27,7 @@ body {
   color: #d5dfe7;
   display: flex;
   justify-content: space-around;
+  margin: 0;
 }
 
 .instructions {
