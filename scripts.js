@@ -9,6 +9,16 @@ const SIZE_OF_CROP = 16;
 const WIDTH = canvas.width;
 const HEIGHT = canvas.height;
 
+var currentBrush;
+
+const brushOptions = document.querySelectorAll(".brush-option");
+brushOptions.forEach((option) => {
+  option.addEventListener("change", () => {
+    currentBrush = option.dataset.select;
+    console.log(`Current brush: ${currentBrush}`);
+  });
+});
+
 window.onload = function () {
   tilesetSelection.style.width = `${SIZE_OF_CROP}px`;
   tilesetSelection.style.height = `${SIZE_OF_CROP}px`;
@@ -132,6 +142,7 @@ function setMouseIsFalse() {
   isMouseDown = false;
 }
 
+// toggle brush tool in the future
 function toggleTile(event) {
   if (isLayerBlocked[currentLayer]) {
     return;
@@ -151,13 +162,22 @@ function toggleTile(event) {
 
   updateStateHistory(key, isArray);
 
-  if (event.shiftKey) {
+  // eraser
+  if (currentBrush == 2) {
     removeTile(key);
-  } else if (event.ctrlKey) {
+  } else if (currentBrush == 4) {
     getTile(key);
   } else {
     addTile(key);
   }
+
+  // if (event.shiftKey) {
+  //   removeTile(key);
+  // } else if (event.ctrlKey) {
+  //   getTile(key);
+  // } else {
+  //   addTile(key);
+  // }
 
   draw();
 }
@@ -184,7 +204,6 @@ function applyCtrlZ(key, isArray) {
 
   if (isArray(tileHistory)) {
     const lastSelected = stateHistory[currentLayer][key].pop();
-
     if (isArray(lastSelected)) {
       selection = lastSelected;
       updateSelection();

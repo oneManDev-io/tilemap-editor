@@ -94,6 +94,39 @@ canvas {
   min-width: 192px;
 }
 
+.tools {}
+
+.brush-select {}
+
+.brush-option {
+  color: transparent !important;
+}
+
+.brush-option:nth-child(1)::after {
+  content: "a";
+  font-size: 1.4rem;
+  background: url("../assets/icons/pen-solid.svg") no-repeat;
+}
+
+.brush-option:nth-child(2)::after {
+  content: "a";
+  font-size: 1.4rem;
+  background: url("../assets/icons/eraser-solid.svg") no-repeat;
+}
+
+.brush-option:nth-child(3)::after {
+  content: "a";
+  font-size: 1.4rem;
+  background: url("../assets/icons/fill-solid.svg") no-repeat;
+}
+
+.brush-option:nth-child(4)::after {
+  content: "a";
+  font-size: 1.4rem;
+  background: url("../assets/icons/eye-dropper-solid.svg") no-repeat;
+}
+
+
 #tileset-source {
   /* width: 192px;
   height: 600px; */
