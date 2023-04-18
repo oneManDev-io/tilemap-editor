@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,8 @@
 
   <meta name="description" content="Create your tile map with this online Tile Map Editor" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/output.css">
   <script src="scripts.js" defer></script>
   <title>Tilemap Editor</title>
 </head>
@@ -37,8 +38,8 @@
           </div>
         </aside>
         <main class="card_right-column">
-          <canvas width="480" height="480"></canvas>
 
+          <canvas id="editor-canvas" width="480" height="480"></canvas>
           <p class="instructions">
             <strong>Click</strong> to paint. <strong>Shift+Click</strong> to remove.
             <strong>Ctrl+Click</strong> to copy. <strong>Alt+Click</strong> to undo.
@@ -60,12 +61,32 @@
                 <span class="padlock" onclick="setLayerIsBlock(0)" padlock-layer="0"></span>
               </li>
             </ul>
-            <small class="attribution">Made by
-              <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from
-              <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-            </small>
+            <div class="credits"></div>
           </div>
+
         </main>
+
+        <aside>
+          <label>Side Menu</label>
+          <div class="side-menu">
+
+            <div class="form-control mt-1">
+              <label class="input-group input-group-sm">
+                <span>Width</span>
+                <input type="text" value="480" class="inputWidth input input-bordered input-sm" />
+              </label>
+            </div>
+
+            <div class="form-control mt-1">
+              <label class="input-group input-group-sm">
+                <span>Height</span>
+                <input type="text" value="480" class="inputHeight input input-bordered input-sm" />
+              </label>
+            </div>
+
+          </div>
+        </aside>
+
       </div>
     </div>
   </div>

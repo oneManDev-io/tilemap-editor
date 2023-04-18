@@ -19,15 +19,22 @@ img {
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  /* /* font-family: 'Source Sans Pro', sans-serif;
   padding: 1em;
   /* background: linear-gradient(180deg, #fff9e4 0%, #eeeed8 100%);
   color: #2f2c48; */
-  background: linear-gradient(180deg, #333331 0%, #363633 100%);
-  color: #d5dfe7;
+  /* background: linear-gradient(180deg, #333331 0%, #363633 100%);
+  color: #d5dfe7; */
   display: flex;
-  justify-content: space-around;
+  */ */ justify-content: space-around;
   margin: 0;
+
+}
+
+canvas {
+  /* background: #f4f8f9; */
+  background: #2d3542;
+  image-rendering: pixelated !important;
 }
 
 .instructions {
@@ -47,7 +54,7 @@ body {
 
 .card {
   /* background: #fff; */
-  background: #464849;
+  /* background: #464849; */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   padding-bottom: 16px;
 }
@@ -82,14 +89,15 @@ body {
   padding-right: 16px;
 }
 
-canvas {
-  /* background: #f4f8f9; */
-  background: #5b6163;
-  image-rendering: pixelated !important;
-}
-
 .tileset-container {
   position: relative;
+  min-width: 192px;
+}
+
+#tileset-source {
+  /* width: 192px;
+  height: 600px; */
+  object-fit: contain !important;
 }
 
 .tileset-container-selection {

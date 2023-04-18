@@ -4,11 +4,16 @@
   "description": "<h1 align=\"center\">TileME</h1>",
   "main": "scripts.js",
   "scripts": {
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "daisyui": "^2.51.5",
     "typescript": "^5.0.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
   }
 }

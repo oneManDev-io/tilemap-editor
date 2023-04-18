@@ -1,12 +1,36 @@
 const tilesetImage = document.getElementById("tileset-source");
-const canvas = document.querySelector("canvas");
+var canvas = document.querySelector("#editor-canvas");
 const tilesetContainer = document.querySelector(".tileset-container");
 const tilesetSelection = document.querySelector(".tileset-container-selection");
 
-const IMG_SOURCE = "./assets/TileEditorSpritesheet.2x_2.png";
-const SIZE_OF_CROP = 32;
+const IMG_SOURCE = "./assets/demo_tileset_16x16.png";
+
+const SIZE_OF_CROP = 16;
 const WIDTH = canvas.width;
 const HEIGHT = canvas.height;
+
+window.onload = function () {
+  tilesetSelection.style.width = `${SIZE_OF_CROP}px`;
+  tilesetSelection.style.height = `${SIZE_OF_CROP}px`;
+};
+
+const widthInput = document.querySelector(".inputWidth");
+const heightInput = document.querySelector(".inputHeight");
+
+function updateCanvasSize() {
+  const width = parseInt(widthInput.value);
+  const height = parseInt(heightInput.value);
+
+  canvas.width = width;
+  canvas.height = height;
+
+  draw();
+  // Add code to redraw the canvas content here
+}
+
+document.querySelectorAll(".inputWidth, .inputHeight").forEach((input) => {
+  input.addEventListener("input", updateCanvasSize);
+});
 
 let selection = [0, 0];
 let currentLayer = 0;
