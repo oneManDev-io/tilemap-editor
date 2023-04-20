@@ -9,7 +9,9 @@
 
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/output.css">
-  <script src="scripts.js" defer></script>
+  <script src="js/tools.js" defer></script>
+  <script src="js/scripts.js" defer></script>
+  <script src="js/data.js" defer></script>
   <title>Tilemap Editor</title>
 </head>
 
@@ -33,7 +35,7 @@
         <aside>
           <label>Tiles</label>
           <div class="tileset-container">
-            <img id="tileset-source" crossorigin />
+            <img draggable="false" id="tileset-source" crossorigin />
             <div class="tileset-container-selection"></div>
           </div>
         </aside>
@@ -41,8 +43,8 @@
 
           <canvas id="editor-canvas" width="480" height="480"></canvas>
           <p class="instructions">
-            <strong>Click</strong> to paint. <strong>Shift+Click</strong> to remove.
-            <strong>Ctrl+Click</strong> to copy. <strong>Alt+Click</strong> to undo.
+            <strong>Click/Drag</strong> to paint. Hold <strong>CTRL+Z</strong> to undo,
+            <strong>Ctrl+Shift+Z</strong> to redo.
           </p>
 
           <div>
@@ -72,10 +74,10 @@
 
             <div class="tools">
               <div class="btn-group brush-select">
-                <input type="radio" name="options" data-title="" data-select="1" class="btn brush-option" checked />
-                <input type="radio" name="options" data-title="" data-select="2" class="btn brush-option" />
-                <input type="radio" name="options" data-title="" data-select="3" class="btn brush-option" />
-                <input type="radio" name="options" data-title="" data-select="4" class="btn brush-option" />
+                <button name="options" data-title="" data-select="1" class="btn brush-option btn-active"></button>
+                <button name="options" data-title="" data-select="2" class="btn brush-option"></button>
+                <button name="options" data-title="" data-select="3" class="btn brush-option"></button>
+                <button name="options" data-title="" data-select="4" class="btn brush-option"></button>
               </div>
             </div>
 
@@ -91,6 +93,10 @@
                 <span>Height</span>
                 <input type="text" value="480" class="inputHeight input input-bordered input-sm" />
               </label>
+            </div>
+
+            <div class="secondCanvas mt-8">
+              <canvas id="tileset-canvas"></canvas>
             </div>
 
           </div>

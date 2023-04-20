@@ -12,29 +12,24 @@ html {
 }
 
 img {
-  /* image-rendering: auto;
-  image-rendering: crisp-edges;
-  image-rendering: -webkit-optimize-contrast; */
   image-rendering: pixelated !important;
 }
 
 body {
-  /* /* font-family: 'Source Sans Pro', sans-serif;
-  padding: 1em;
-  /* background: linear-gradient(180deg, #fff9e4 0%, #eeeed8 100%);
-  color: #2f2c48; */
-  /* background: linear-gradient(180deg, #333331 0%, #363633 100%);
-  color: #d5dfe7; */
   display: flex;
-  */ */ justify-content: space-around;
   margin: 0;
-
 }
 
-canvas {
-  /* background: #f4f8f9; */
+aside {
+  user-select: none;
+}
+
+canvas,
+#tileset-canvas {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
   background: #2d3542;
-  image-rendering: pixelated !important;
 }
 
 .instructions {
@@ -53,10 +48,10 @@ canvas {
 }
 
 .card {
-  /* background: #fff; */
-  /* background: #464849; */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   padding-bottom: 16px;
+  /* background: #fff; */
+  /* background: #464849; */
 }
 
 .card header {
@@ -94,12 +89,14 @@ canvas {
   min-width: 192px;
 }
 
+/* Side Menu */
 .tools {}
 
 .brush-select {}
 
 .brush-option {
   color: transparent !important;
+  outline: 0 !important;
 }
 
 .brush-option:nth-child(1)::after {
@@ -205,7 +202,7 @@ canvas {
   color: #fff;
   border-radius: 6px;
   outline: 0;
-  padding: 6px 16px;
+  padding: 0px 12px 4px 12px;
   cursor: pointer;
   max-height: 40px;
   margin: auto 5px;
