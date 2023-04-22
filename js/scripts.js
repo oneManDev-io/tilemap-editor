@@ -1,8 +1,9 @@
 var tilesetImage = document.getElementById("tileset-source");
-var canvas = document.querySelector("#editor-canvas");
 const tilesetContainer = document.querySelector(".tileset-container");
 const tilesetSelection = document.querySelector(".tileset-container-selection");
+const selectionCanvas = document.querySelector(".selectionCanvas");
 const tilesetCanvas = document.getElementById("tileset-canvas");
+var canvas = document.querySelector("#editor-canvas");
 const imgSrc = "./assets/demo_tileset_16x16.png";
 
 // tilemap selection size will depend on pixelUnit
@@ -118,6 +119,7 @@ function tilesetSelect() {
   tilesetCanvas.width = tilesetImage.width * scale;
   tilesetCanvas.height = tilesetImage.height * scale;
 
+  // Disable anti-aliasing
   ctx.imageSmoothingEnabled = false;
 
   ctx.clearRect(0, 0, tilesetCanvas.width, tilesetCanvas.height);
@@ -133,58 +135,105 @@ function tilesetSelect() {
     tilesetCanvas.height
   );
 
-  // Disable anti-aliasing
-  ctx.strokeStyle = "black";
+  // Add event listeners for mouse drag
+  let isDragging = false;
+  let startX = 0;
+  let startY = 0;
+  let endX = 0;
+  let endY = 0;
 
-  for (let x = 0; x <= tilesetCanvas.width; x += pixelUnit * scale) {
-    ctx.beginPath();
-    ctx.moveTo(x + 0.5, 0);
-    ctx.lineTo(x + 0.5, tilesetCanvas.height);
-    ctx.stroke();
+  function initStart(event) {
+    startX =
+      Math.floor(event.offsetX / (pixelUnit * scale)) * (pixelUnit * scale);
+    startY =
+      Math.floor(event.offsetY / (pixelUnit * scale)) * (pixelUnit * scale);
   }
 
-  for (let y = 0; y <= tilesetCanvas.height; y += pixelUnit * scale) {
-    ctx.beginPath();
-    ctx.moveTo(0, y + 0.5);
-    ctx.lineTo(tilesetCanvas.width, y + 0.5);
-    ctx.stroke();
+  function initEnd(event) {
+    endX =
+      Math.floor(event.offsetX / (pixelUnit * scale)) * (pixelUnit * scale);
+    endY =
+      Math.floor(event.offsetY / (pixelUnit * scale)) * (pixelUnit * scale);
+    drawSelectionRect(ctx, startX, startY, endX, endY);
   }
 
-  // Add click event listener to tilesetCanvas
-  tilesetCanvas.addEventListener("click", function (event) {
-    // Calculate the clicked tile position
-    const rect = tilesetCanvas.getBoundingClientRect();
-    const x =
-      Math.floor((event.clientX - rect.left) / (pixelUnit * scale)) *
-      pixelUnit *
-      scale;
-    const y =
-      Math.floor((event.clientY - rect.top) / (pixelUnit * scale)) *
-      pixelUnit *
-      scale;
+  let regClick = true;
 
-    // Draw a cyan colored stroke around the clicked tile
-    ctx.strokeStyle = "cyan";
-    ctx.lineWidth = 2;
-    ctx.strokeRect(
-      x + 0.5,
-      y + 0.5,
-      pixelUnit * scale - 1,
-      pixelUnit * scale - 1
+  tilesetCanvas.addEventListener("click", (event) => {
+    if (!isDragging) {
+      event.preventDefault();
+      // Execute click event callback code
+      console.log("clicked event");
+      // initStart(event);
+      initEnd(event);
+    }
+  });
+
+  tilesetCanvas.addEventListener("mousedown", (event) => {
+    regClick = true;
+    isDragging = true;
+    initStart(event);
+  });
+
+  selectionCanvas.addEventListener("mousemove", (event) => {
+    if (isDragging) {
+      regClick = false;
+      initEnd(event);
+    }
+
+    // console.log(startX, startY);
+  });
+
+  window.addEventListener("mouseup", () => {
+    if (isDragging) {
+      isDragging = false;
+      regClick = false;
+      const selectedTiles = getSelectedTiles(startX, startY, endX, endY);
+    }
+  });
+
+  // Draw a selection rectangle between two points
+  function drawSelectionRect(ctx, startX, startY, endX, endY) {
+    ctx.clearRect(0, 0, tilesetCanvas.width, tilesetCanvas.height);
+    ctx.drawImage(
+      tilesetImage,
+      0,
+      0,
+      tilesetImage.width,
+      tilesetImage.height,
+      0,
+      0,
+      tilesetCanvas.width,
+      tilesetCanvas.height
     );
 
-    // Reset the stroke style and width after a short delay
-    setTimeout(function () {
-      ctx.strokeStyle = "black";
-      ctx.lineWidth = 1;
-      ctx.strokeRect(
-        x + 0.5,
-        y + 0.5,
-        pixelUnit * scale - 1,
-        pixelUnit * scale - 1
-      );
-    }, 500);
-  });
+    ctx.strokeStyle = "cyan";
+    ctx.lineWidth = 2;
+
+    let x = endX - startX;
+    let y = endY - startY;
+
+    if (x < pixelUnit * scale || y < pixelUnit * scale) {
+      x = pixelUnit * scale;
+      y = pixelUnit * scale;
+      // console.log(`x: ${x} y: ${y}`);
+    }
+
+    ctx.strokeRect(startX, startY, x, y);
+
+    console.log(x, y);
+  }
+
+  // Get an array of selected tile positions
+  function getSelectedTiles(startX, startY, endX, endY) {
+    const selectedTiles = [];
+    for (let x = startX; x <= endX; x += pixelUnit * scale) {
+      for (let y = startY; y <= endY; y += pixelUnit * scale) {
+        selectedTiles.push({ x, y });
+      }
+    }
+    return selectedTiles;
+  }
 }
 
 canvas.addEventListener("mousedown", setMouseIsTrue);
