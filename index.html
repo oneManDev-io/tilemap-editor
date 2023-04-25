@@ -9,8 +9,11 @@
 
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/output.css">
+  <script src="js/init.js" defer></script>
   <script src="js/tools.js" defer></script>
   <script src="js/scripts.js" defer></script>
+  <script src="js/tileSelect.js" defer></script>
+  <script src="js/old.js" defer></script>
   <script src="js/data.js" defer></script>
   <title>Tilemap Editor</title>
 </head>
@@ -36,6 +39,9 @@
         <aside>
           <label>Tiles</label>
           <div class="tileset-container">
+            <div class="selectionCanvas mt-8">
+              <canvas id="tileset-canvas"></canvas>
+            </div>
             <img draggable="false" id="tileset-source" crossorigin />
             <div class="tileset-container-selection"></div>
           </div>
@@ -96,10 +102,12 @@
               </label>
             </div>
 
-            <div class="selectionCanvas mt-8">
-              <canvas id="tileset-canvas"></canvas>
+            <div class="form-control mt-1">
+              <label class="input-group input-group-sm">
+                <span>Size</span>
+                <input type="text" value="32" class="pixelSize input input-bordered input-sm" />
+              </label>
             </div>
-
           </div>
         </aside>
 

@@ -127,17 +127,18 @@ canvas,
 #tileset-source {
   /* width: 192px;
   height: 600px; */
+  display: none;
   object-fit: contain !important;
 }
 
-.tileset-container-selection {
+/* .tileset-container-selection {
   position: absolute;
   outline: 3px solid cyan;
   left: 0;
   top: 0;
   width: 32px;
   height: 32px;
-}
+} */
 
 .layers {
   list-style-type: none;
