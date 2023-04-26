@@ -1,10 +1,8 @@
-const scale = pixelUnit === 16 ? 2 : 1;
+const ctx = getSelectionCanvas();
 
 function tilesetSelect() {
-  const ctx = getSelectionCanvas();
-
-  tilesetCanvas.width = tilesetImage.width * scale;
-  tilesetCanvas.height = tilesetImage.height * scale;
+  // tilesetCanvas.width = tilesetImage.width * scale;
+  // tilesetCanvas.height = tilesetImage.height * scale;
 
   // Disable anti-aliasing
   ctx.imageSmoothingEnabled = false;
@@ -27,10 +25,8 @@ function tilesetSelect() {
 let isDragging = false;
 let startX = 0;
 let startY = 0;
-let endX = 0;
-let endY = 0;
-
-const ctx = getSelectionCanvas();
+let endX = pixelUnit;
+let endY = pixelUnit;
 
 function initStart(event) {
   startX =

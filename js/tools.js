@@ -34,6 +34,10 @@ window.addEventListener("keydown", (event) => {
 
 const widthInput = document.querySelector(".inputWidth");
 const heightInput = document.querySelector(".inputHeight");
+const pixelSize = document.querySelector(".pixelSize");
+pixelSize.value = pixelUnit;
+
+pixelSize.addEventListener("input", updatePixelUnit);
 
 function updateCanvasSize() {
   const width = parseInt(widthInput.value);
@@ -43,4 +47,16 @@ function updateCanvasSize() {
   canvas.height = height;
 
   draw();
+}
+
+function updatePixelUnit() {
+  var scale = pixelUnit === 16 ? 2 : 1;
+  pixelInput = parseInt(pixelSize.value);
+  // console.log(pixelInput);
+  pixelUnit = pixelInput;
+
+  tilesetCanvas.width = tilesetImage.width * scale * 2;
+  tilesetCanvas.height = tilesetImage.height * scale * 2;
+  draw();
+  tilesetSelect();
 }

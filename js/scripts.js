@@ -2,15 +2,6 @@ document.querySelectorAll(".inputWidth, .inputHeight").forEach((input) => {
   input.addEventListener("input", updateCanvasSize);
 });
 
-pixelSize.addEventListener("input", () => {
-  a = parseInt(pixelSize.value);
-  console.log(a);
-  pixelUnit = a;
-
-  // tilesetSelection.style.width = `${a}px`;
-  // tilesetSelection.style.height = `${a}px`;
-});
-
 let selection = [0, 0];
 let currentLayer = 0;
 let isMouseDown = false;
@@ -108,7 +99,6 @@ function draw() {
   });
 }
 
-tilesetCanvas.addEventListener("click", function () {});
 canvas.addEventListener("mousedown", setMouseIsTrue);
 canvas.addEventListener("mouseup", setMouseIsFalse);
 canvas.addEventListener("mouseleave", setMouseIsFalse);
@@ -163,7 +153,7 @@ function getTile(key) {
 
   if (clicked) {
     selection = clicked;
-    updateSelection();
+    // updateSelection();
   }
 }
 
