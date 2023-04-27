@@ -16,7 +16,7 @@ jsonImport.addEventListener("change", (event) => {
   reader.onload = () => {
     const json = reader.result;
     const uploadedGrid = JSON.parse(json);
-    console.log(uploadedGrid);
+    console.table(uploadedGrid[0]);
     layers = uploadedGrid;
     draw();
   };

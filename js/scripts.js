@@ -54,17 +54,6 @@ function setLayerIsBlock(layer) {
     .classList.toggle("close", isLayerBlocked[layerNumber]);
 }
 
-// tilesetContainer.addEventListener("mousedown", (e) => {
-//   selection = getCoordinates(e);
-//   console.log(getCoordinates(e));
-//   // updateSelection();
-// });
-
-// function updateSelection() {
-//   tilesetSelection.style.left = selection[0] * pixelUnit + "px";
-//   tilesetSelection.style.top = selection[1] * pixelUnit + "px";
-// }
-
 function getCoordinates(event) {
   const { x, y } = event.target.getBoundingClientRect();
   const selectionX = Math.floor(Math.max(event.clientX - x, 0) / pixelUnit);
@@ -136,7 +125,7 @@ function toggleTile(event) {
   } else if (currentBrush == 2) {
     removeTile(key);
   } else if (currentBrush == 3) {
-    console.log("bucket fill tool");
+    fillArea(key);
   } else if (currentBrush == 4) {
     getTile(key);
   }
@@ -148,17 +137,23 @@ function addTile(key) {
   layers[currentLayer][key] = selection;
 }
 
+function removeTile(key) {
+  delete layers[currentLayer][key];
+}
+
+function fillArea() {
+  console.table(layers[currentLayer]);
+}
+
 function getTile(key) {
   const clicked = layers[currentLayer][key];
 
   if (clicked) {
     selection = clicked;
+    console.log(selection);
+    tilesetSelect();
     // updateSelection();
   }
-}
-
-function removeTile(key) {
-  delete layers[currentLayer][key];
 }
 
 function updateStateHistory(key, isArray) {
