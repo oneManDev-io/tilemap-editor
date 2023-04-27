@@ -55,8 +55,8 @@ function updatePixelUnit() {
   // console.log(pixelInput);
   pixelUnit = pixelInput;
 
-  tilesetCanvas.width = tilesetImage.width * scale * 2;
-  tilesetCanvas.height = tilesetImage.height * scale * 2;
+  tilesetCanvas.width = tilesetImage.width * scale;
+  tilesetCanvas.height = tilesetImage.height * scale;
   draw();
   tilesetSelect();
 }

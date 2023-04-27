@@ -1,96 +1,42 @@
-/*
-! tailwindcss v3.3.1 | MIT License | https://tailwindcss.com
-*/
-
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
-
+/*! tailwindcss v3.3.1 | MIT License | https://tailwindcss.com*/
 *,
-::before,
-::after {
+:after,
+:before {
   box-sizing: border-box;
-  /* 1 */
-  border-width: 0;
-  /* 2 */
-  border-style: solid;
-  /* 2 */
-  border-color: #e5e7eb;
-  /* 2 */
+  border: 0 solid #e5e7eb
 }
 
-::before,
-::after {
-  --tw-content: '';
+:after,
+:before {
+  --tw-content: ""
 }
-
-/*
-1. Use a consistent sensible line-height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-3. Use a more readable tab size.
-4. Use the user's configured `sans` font-family by default.
-5. Use the user's configured `sans` font-feature-settings by default.
-6. Use the user's configured `sans` font-variation-settings by default.
-*/
 
 html {
   line-height: 1.5;
-  /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
   -moz-tab-size: 4;
-  /* 3 */
   -o-tab-size: 4;
-     tab-size: 4;
-  /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  /* 4 */
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-feature-settings: normal;
-  /* 5 */
-  font-variation-settings: normal;
-  /* 6 */
+  font-variation-settings: normal
 }
-
-/*
-1. Remove the margin in all browsers.
-2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
-*/
 
 body {
   margin: 0;
-  /* 1 */
-  line-height: inherit;
-  /* 2 */
+  line-height: inherit
 }
-
-/*
-1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-3. Ensure horizontal rules are visible by default.
-*/
 
 hr {
   height: 0;
-  /* 1 */
   color: inherit;
-  /* 2 */
-  border-top-width: 1px;
-  /* 3 */
+  border-top-width: 1px
 }
-
-/*
-Add the correct text decoration in Chrome, Edge, and Safari.
-*/
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted
 }
-
-/*
-Remove the default font size and weight for headings.
-*/
 
 h1,
 h2,
@@ -99,90 +45,52 @@ h4,
 h5,
 h6 {
   font-size: inherit;
-  font-weight: inherit;
+  font-weight: inherit
 }
-
-/*
-Reset links to optimize for opt-in styling instead of opt-out.
-*/
 
 a {
   color: inherit;
-  text-decoration: inherit;
+  text-decoration: inherit
 }
-
-/*
-Add the correct font weight in Edge and Safari.
-*/
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: bolder
 }
-
-/*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
-*/
 
 code,
 kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+pre,
+samp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-size: 1em
 }
-
-/*
-Add the correct font size in all browsers.
-*/
 
 small {
-  font-size: 80%;
+  font-size: 80%
 }
-
-/*
-Prevent `sub` and `sup` elements from affecting the line height in all browsers.
-*/
 
 sub,
 sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline;
+  vertical-align: initial
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em
 }
 
 sup {
-  top: -0.5em;
+  top: -.5em
 }
-
-/*
-1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
-3. Remove gaps between table borders by default.
-*/
 
 table {
   text-indent: 0;
-  /* 1 */
   border-color: inherit;
-  /* 2 */
-  border-collapse: collapse;
-  /* 3 */
+  border-collapse: collapse
 }
-
-/*
-1. Change the font styles in all browsers.
-2. Remove the margin in Firefox and Safari.
-3. Remove default padding in all browsers.
-*/
 
 button,
 input,
@@ -190,127 +98,67 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
-  /* 1 */
   font-size: 100%;
-  /* 1 */
   font-weight: inherit;
-  /* 1 */
   line-height: inherit;
-  /* 1 */
   color: inherit;
-  /* 1 */
   margin: 0;
-  /* 2 */
-  padding: 0;
-  /* 3 */
+  padding: 0
 }
-
-/*
-Remove the inheritance of text transform in Edge and Firefox.
-*/
 
 button,
 select {
-  text-transform: none;
+  text-transform: none
 }
 
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Remove default button styles.
-*/
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type=button],
+[type=reset],
+[type=submit],
+button {
   -webkit-appearance: button;
-  /* 1 */
-  background-color: transparent;
-  /* 2 */
-  background-image: none;
-  /* 2 */
+  background-color: initial;
+  background-image: none
 }
-
-/*
-Use the modern Firefox focus style for all focusable elements.
-*/
 
 :-moz-focusring {
-  outline: auto;
+  outline: auto
 }
-
-/*
-Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
-*/
 
 :-moz-ui-invalid {
-  box-shadow: none;
+  box-shadow: none
 }
-
-/*
-Add the correct vertical alignment in Chrome and Firefox.
-*/
 
 progress {
-  vertical-align: baseline;
+  vertical-align: initial
 }
-
-/*
-Correct the cursor style of increment and decrement buttons in Safari.
-*/
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
-  height: auto;
+  height: auto
 }
 
-/*
-1. Correct the odd appearance in Chrome and Safari.
-2. Correct the outline style in Safari.
-*/
-
-[type='search'] {
+[type=search] {
   -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  outline-offset: -2px
 }
-
-/*
-Remove the inner padding in Chrome and Safari on macOS.
-*/
 
 ::-webkit-search-decoration {
-  -webkit-appearance: none;
+  -webkit-appearance: none
 }
-
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to `inherit` in Safari.
-*/
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  font: inherit
 }
-
-/*
-Add the correct display in Chrome and Safari.
-*/
 
 summary {
-  display: list-item;
+  display: list-item
 }
 
-/*
-Removes the default spacing and border for appropriate elements.
-*/
-
 blockquote,
-dl,
 dd,
+dl,
+figure,
 h1,
 h2,
 h3,
@@ -318,118 +166,83 @@ h4,
 h5,
 h6,
 hr,
-figure,
 p,
 pre {
-  margin: 0;
+  margin: 0
 }
 
 fieldset {
-  margin: 0;
-  padding: 0;
+  margin: 0
 }
 
+fieldset,
 legend {
-  padding: 0;
+  padding: 0
 }
 
+menu,
 ol,
-ul,
-menu {
+ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0
 }
-
-/*
-Prevent resizing textareas horizontally by default.
-*/
 
 textarea {
-  resize: vertical;
+  resize: vertical
 }
 
-/*
-1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
-2. Set the default placeholder color to the user's configured gray 400 color.
-*/
-
-input::-moz-placeholder, textarea::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
+  color: #9ca3af
 }
 
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
+  color: #9ca3af
 }
 
-/*
-Set the default cursor for buttons.
-*/
-
-button,
-[role="button"] {
-  cursor: pointer;
+[role=button],
+button {
+  cursor: pointer
 }
-
-/*
-Make sure disabled buttons don't get the pointer cursor.
-*/
 
 :disabled {
-  cursor: default;
+  cursor: default
 }
 
-/*
-1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
-2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
-   This can trigger a poorly considered lint error in some tools but is included by design.
-*/
-
-img,
-svg,
-video,
-canvas,
 audio,
-iframe,
+canvas,
 embed,
-object {
+iframe,
+img,
+object,
+svg,
+video {
   display: block;
-  /* 1 */
-  vertical-align: middle;
-  /* 2 */
+  vertical-align: middle
 }
-
-/*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-*/
 
 img,
 video {
   max-width: 100%;
-  height: auto;
+  height: auto
 }
 
-/* Make elements with the HTML hidden attribute stay hidden by default */
-
 [hidden] {
-  display: none;
+  display: none
 }
 
 :root,
 [data-theme] {
-  background-color: hsla(var(--b1) / var(--tw-bg-opacity, 1));
-  color: hsla(var(--bc) / var(--tw-text-opacity, 1));
+  background-color: hsla(var(--b1)/var(--tw-bg-opacity, 1));
+  color: hsla(var(--bc)/var(--tw-text-opacity, 1))
 }
 
 html {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent
 }
 
 :root {
@@ -466,10 +279,13 @@ html {
   --in: 198 93.137% 60%;
   --su: 157.83 64.082% 51.961%;
   --wa: 42.778 96.429% 56.078%;
-  --er: 0 90.541% 70.98%;
+  --er: 0 90.541% 70.98%
 }
 
-*, ::before, ::after {
+*,
+::backdrop,
+:after,
+:before {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -479,121 +295,74 @@ html {
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
   --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-color: #3b82f680;
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
-
-::backdrop {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia:
 }
 
 .container {
-  width: 100%;
+  width: 100%
 }
 
-@media (min-width: 640px) {
+@media (min-width:640px) {
   .container {
-    max-width: 640px;
+    max-width: 640px
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width:768px) {
   .container {
-    max-width: 768px;
+    max-width: 768px
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width:1024px) {
   .container {
-    max-width: 1024px;
+    max-width: 1024px
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width:1280px) {
   .container {
-    max-width: 1280px;
+    max-width: 1280px
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width:1536px) {
   .container {
-    max-width: 1536px;
+    max-width: 1536px
   }
 }
 
@@ -602,24 +371,24 @@ html {
   flex-shrink: 0;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  border-color: transparent;
-  border-color: hsl(var(--n) / var(--tw-border-opacity));
+  border-color: #0000;
+  border-color: hsl(var(--n)/var(--tw-border-opacity));
   text-align: center;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: var(--rounded-btn, 0.5rem);
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  border-radius: var(--rounded-btn, .5rem);
   height: 3rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  font-size: 0.875rem;
+  font-size: .875rem;
   line-height: 1.25rem;
   line-height: 1em;
   min-height: 3rem;
@@ -628,88 +397,85 @@ html {
   text-transform: var(--btn-text-case, uppercase);
   text-decoration-line: none;
   border-width: var(--border-btn, 1px);
-  animation: button-pop var(--animation-btn, 0.25s) ease-out;
+  animation: button-pop var(--animation-btn, .25s) ease-out;
   --tw-border-opacity: 1;
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+  background-color: hsl(var(--n)/var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--nc) / var(--tw-text-opacity));
+  color: hsl(var(--nc)/var(--tw-text-opacity))
 }
 
 .btn-disabled,
-  .btn[disabled] {
-  pointer-events: none;
-}
-
 .btn.loading,
-    .btn.loading:hover {
-  pointer-events: none;
+.btn.loading:hover,
+.btn[disabled] {
+  pointer-events: none
 }
 
 .btn.loading:before {
-  margin-right: 0.5rem;
+  margin-right: .5rem;
   height: 1rem;
   width: 1rem;
   border-radius: 9999px;
   border-width: 2px;
   animation: spin 2s linear infinite;
   content: "";
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-bottom-color: currentColor;
-  border-right-color: currentColor;
+  border-top-color: #0000;
+  border-left-color: #0000;
+  border-bottom-color: initial;
+  border-right-color: initial
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
   .btn.loading:before {
-    animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite
   }
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
+  0% {
+    transform: rotate(0deg)
   }
 
   to {
-    transform: rotate(360deg);
+    transform: rotate(1turn)
   }
 }
 
 .btn-group {
-  display: inline-flex;
+  display: inline-flex
 }
 
-.btn-group > input[type="radio"].btn {
+.btn-group>input[type=radio].btn {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none
 }
 
-.btn-group > input[type="radio"].btn:before {
-  content: attr(data-title);
+.btn-group>input[type=radio].btn:before {
+  content: attr(data-title)
 }
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  border-radius: var(--rounded-box, 1rem);
+  border-radius: var(--rounded-box, 1rem)
 }
 
 .card:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+  outline: 2px solid #0000;
+  outline-offset: 2px
 }
 
 .card figure {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center
 }
 
 .card.image-full {
-  display: grid;
+  display: grid
 }
 
 .card.image-full:before {
@@ -717,46 +483,46 @@ html {
   content: "";
   z-index: 10;
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--n) / var(--tw-bg-opacity));
-  opacity: 0.75;
-  border-radius: var(--rounded-box, 1rem);
+  background-color: hsl(var(--n)/var(--tw-bg-opacity));
+  opacity: .75;
+  border-radius: var(--rounded-box, 1rem)
 }
 
 .card.image-full:before,
-    .card.image-full > * {
+.card.image-full>* {
   grid-column-start: 1;
-  grid-row-start: 1;
+  grid-row-start: 1
 }
 
-.card.image-full > figure img {
+.card.image-full>figure img {
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover
 }
 
-.card.image-full > .card-body {
+.card.image-full>.card-body {
   position: relative;
   z-index: 20;
   --tw-text-opacity: 1;
-  color: hsl(var(--nc) / var(--tw-text-opacity));
+  color: hsl(var(--nc)/var(--tw-text-opacity))
 }
 
 .form-control {
-  display: flex;
-  flex-direction: column;
+  flex-direction: column
+}
+
+.form-control,
+.label {
+  display: flex
 }
 
 .label {
-  display: flex;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   align-items: center;
   justify-content: space-between;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: .5rem .25rem
 }
 
 .input {
@@ -768,300 +534,301 @@ html {
   line-height: 2;
   line-height: 1.5rem;
   border-width: 1px;
-  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  border-color: hsl(var(--bc)/var(--tw-border-opacity));
   --tw-border-opacity: 0;
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
-  border-radius: var(--rounded-btn, 0.5rem);
+  background-color: hsl(var(--b1)/var(--tw-bg-opacity));
+  border-radius: var(--rounded-btn, .5rem)
 }
 
 .input-group {
   display: flex;
   width: 100%;
-  align-items: stretch;
+  align-items: stretch
 }
 
-.input-group > .input {
-  isolation: isolate;
+.input-group>.input {
+  isolation: isolate
 }
 
-.input-group > *,
-  .input-group > .input,
-  .input-group > .textarea,
-  .input-group > .select {
-  border-radius: 0px;
+.input-group>*,
+.input-group>.input,
+.input-group>.select,
+.input-group>.textarea {
+  border-radius: 0
 }
 
 .input-group-sm {
-  font-size: 0.875rem;
-  line-height: 2rem;
+  font-size: .875rem;
+  line-height: 2rem
 }
 
 .input-group :where(span) {
   display: flex;
   align-items: center;
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
+  background-color: hsl(var(--b3, var(--b2))/var(--tw-bg-opacity));
   padding-left: 1rem;
-  padding-right: 1rem;
+  padding-right: 1rem
 }
 
-.input-group > :first-child {
-  border-top-left-radius: var(--rounded-btn, 0.5rem);
+.input-group>:first-child {
+  border-top-left-radius: var(--rounded-btn, .5rem);
   border-top-right-radius: 0;
-  border-bottom-left-radius: var(--rounded-btn, 0.5rem);
-  border-bottom-right-radius: 0;
+  border-bottom-left-radius: var(--rounded-btn, .5rem);
+  border-bottom-right-radius: 0
 }
 
-.input-group > :last-child {
+.input-group>:last-child {
   border-top-left-radius: 0;
-  border-top-right-radius: var(--rounded-btn, 0.5rem);
+  border-top-right-radius: var(--rounded-btn, .5rem);
   border-bottom-left-radius: 0;
-  border-bottom-right-radius: var(--rounded-btn, 0.5rem);
+  border-bottom-right-radius: var(--rounded-btn, .5rem)
 }
 
 .link {
   cursor: pointer;
-  text-decoration-line: underline;
+  text-decoration-line: underline
 }
 
 .btm-nav>* .label {
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.5rem
 }
 
-.btn:active:hover,
-  .btn:active:focus {
+.btn:active:focus,
+.btn:active:hover {
   animation: none;
-  transform: scale(var(--btn-focus-scale, 0.95));
+  transform: scale(var(--btn-focus-scale, .95))
 }
 
-.btn:hover,
-    .btn-active {
+.btn-active,
+.btn:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--nf, var(--n)) / var(--tw-border-opacity));
+  border-color: hsl(var(--nf, var(--n))/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--nf, var(--n)) / var(--tw-bg-opacity));
+  background-color: hsl(var(--nf, var(--n))/var(--tw-bg-opacity))
 }
 
 .btn:focus-visible {
   outline: 2px solid hsl(var(--nf));
-  outline-offset: 2px;
+  outline-offset: 2px
 }
 
-.btn-primary:hover,
-    .btn-primary.btn-active {
+.btn-primary.btn-active,
+.btn-primary:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--pf, var(--p)) / var(--tw-border-opacity));
+  border-color: hsl(var(--pf, var(--p))/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
+  background-color: hsl(var(--pf, var(--p))/var(--tw-bg-opacity))
 }
 
-.btn-secondary:hover,
-    .btn-secondary.btn-active {
+.btn-secondary.btn-active,
+.btn-secondary:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--sf, var(--s)) / var(--tw-border-opacity));
+  border-color: hsl(var(--sf, var(--s))/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--sf, var(--s)) / var(--tw-bg-opacity));
+  background-color: hsl(var(--sf, var(--s))/var(--tw-bg-opacity))
 }
 
-.btn-accent:hover,
-    .btn-accent.btn-active {
+.btn-accent.btn-active,
+.btn-accent:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--af, var(--a)) / var(--tw-border-opacity));
+  border-color: hsl(var(--af, var(--a))/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--af, var(--a)) / var(--tw-bg-opacity));
+  background-color: hsl(var(--af, var(--a))/var(--tw-bg-opacity))
 }
 
-.btn-info:hover,
-    .btn-info.btn-active {
+.btn-info.btn-active,
+.btn-info:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--in) / var(--tw-border-opacity));
+  border-color: hsl(var(--in)/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--in) / var(--tw-bg-opacity));
+  background-color: hsl(var(--in)/var(--tw-bg-opacity))
 }
 
-.btn-success:hover,
-    .btn-success.btn-active {
+.btn-success.btn-active,
+.btn-success:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--su) / var(--tw-border-opacity));
+  border-color: hsl(var(--su)/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--su) / var(--tw-bg-opacity));
+  background-color: hsl(var(--su)/var(--tw-bg-opacity))
 }
 
-.btn-warning:hover,
-    .btn-warning.btn-active {
+.btn-warning.btn-active,
+.btn-warning:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--wa) / var(--tw-border-opacity));
+  border-color: hsl(var(--wa)/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--wa) / var(--tw-bg-opacity));
+  background-color: hsl(var(--wa)/var(--tw-bg-opacity))
 }
 
-.btn-error:hover,
-    .btn-error.btn-active {
+.btn-error.btn-active,
+.btn-error:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--er) / var(--tw-border-opacity));
+  border-color: hsl(var(--er)/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--er) / var(--tw-bg-opacity));
+  background-color: hsl(var(--er)/var(--tw-bg-opacity))
 }
 
-.btn.glass:hover,
-    .btn.glass.btn-active {
+.btn.glass.btn-active,
+.btn.glass:hover {
   --glass-opacity: 25%;
-  --glass-border-opacity: 15%;
+  --glass-border-opacity: 15%
 }
 
 .btn.glass:focus-visible {
-  outline: 2px solid currentColor;
+  outline: 2px solid currentColor
 }
 
-.btn-ghost:hover,
-    .btn-ghost.btn-active {
+.btn-ghost.btn-active,
+.btn-ghost:hover {
   --tw-border-opacity: 0;
-  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.2;
+  background-color: hsl(var(--bc)/var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.2
 }
 
-.btn-link:hover,
-    .btn-link.btn-active {
-  border-color: transparent;
-  background-color: transparent;
-  text-decoration-line: underline;
+.btn-link.btn-active,
+.btn-link:hover {
+  border-color: #0000;
+  background-color: initial;
+  text-decoration-line: underline
 }
 
-.btn-outline:hover,
-    .btn-outline.btn-active {
+.btn-outline.btn-active,
+.btn-outline:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  border-color: hsl(var(--bc)/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+  background-color: hsl(var(--bc)/var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--b1) / var(--tw-text-opacity));
+  color: hsl(var(--b1)/var(--tw-text-opacity))
 }
 
-.btn-outline.btn-primary:hover,
-      .btn-outline.btn-primary.btn-active {
+.btn-outline.btn-primary.btn-active,
+.btn-outline.btn-primary:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--pf, var(--p)) / var(--tw-border-opacity));
+  border-color: hsl(var(--pf, var(--p))/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
+  background-color: hsl(var(--pf, var(--p))/var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
+  color: hsl(var(--pc)/var(--tw-text-opacity))
 }
 
-.btn-outline.btn-secondary:hover,
-      .btn-outline.btn-secondary.btn-active {
+.btn-outline.btn-secondary.btn-active,
+.btn-outline.btn-secondary:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--sf, var(--s)) / var(--tw-border-opacity));
+  border-color: hsl(var(--sf, var(--s))/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--sf, var(--s)) / var(--tw-bg-opacity));
+  background-color: hsl(var(--sf, var(--s))/var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--sc) / var(--tw-text-opacity));
+  color: hsl(var(--sc)/var(--tw-text-opacity))
 }
 
-.btn-outline.btn-accent:hover,
-      .btn-outline.btn-accent.btn-active {
+.btn-outline.btn-accent.btn-active,
+.btn-outline.btn-accent:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--af, var(--a)) / var(--tw-border-opacity));
+  border-color: hsl(var(--af, var(--a))/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--af, var(--a)) / var(--tw-bg-opacity));
+  background-color: hsl(var(--af, var(--a))/var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--ac) / var(--tw-text-opacity));
+  color: hsl(var(--ac)/var(--tw-text-opacity))
 }
 
-.btn-outline.btn-success:hover,
-      .btn-outline.btn-success.btn-active {
+.btn-outline.btn-success.btn-active,
+.btn-outline.btn-success:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--su) / var(--tw-border-opacity));
+  border-color: hsl(var(--su)/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--su) / var(--tw-bg-opacity));
+  background-color: hsl(var(--su)/var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--suc, var(--nc)) / var(--tw-text-opacity));
+  color: hsl(var(--suc, var(--nc))/var(--tw-text-opacity))
 }
 
-.btn-outline.btn-info:hover,
-      .btn-outline.btn-info.btn-active {
+.btn-outline.btn-info.btn-active,
+.btn-outline.btn-info:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--in) / var(--tw-border-opacity));
+  border-color: hsl(var(--in)/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--in) / var(--tw-bg-opacity));
+  background-color: hsl(var(--in)/var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--inc, var(--nc)) / var(--tw-text-opacity));
+  color: hsl(var(--inc, var(--nc))/var(--tw-text-opacity))
 }
 
-.btn-outline.btn-warning:hover,
-      .btn-outline.btn-warning.btn-active {
+.btn-outline.btn-warning.btn-active,
+.btn-outline.btn-warning:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--wa) / var(--tw-border-opacity));
+  border-color: hsl(var(--wa)/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--wa) / var(--tw-bg-opacity));
+  background-color: hsl(var(--wa)/var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--wac, var(--nc)) / var(--tw-text-opacity));
+  color: hsl(var(--wac, var(--nc))/var(--tw-text-opacity))
 }
 
-.btn-outline.btn-error:hover,
-      .btn-outline.btn-error.btn-active {
+.btn-outline.btn-error.btn-active,
+.btn-outline.btn-error:hover {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--er) / var(--tw-border-opacity));
+  border-color: hsl(var(--er)/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--er) / var(--tw-bg-opacity));
+  background-color: hsl(var(--er)/var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--erc, var(--nc)) / var(--tw-text-opacity));
+  color: hsl(var(--erc, var(--nc))/var(--tw-text-opacity))
 }
 
 .btn-disabled,
-  .btn-disabled:hover,
-  .btn[disabled],
-  .btn[disabled]:hover {
+.btn-disabled:hover,
+.btn[disabled],
+.btn[disabled]:hover {
   --tw-border-opacity: 0;
-  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+  background-color: hsl(var(--n)/var(--tw-bg-opacity));
   --tw-bg-opacity: 0.2;
-  color: hsl(var(--bc) / var(--tw-text-opacity));
-  --tw-text-opacity: 0.2;
+  color: hsl(var(--bc)/var(--tw-text-opacity));
+  --tw-text-opacity: 0.2
 }
 
-.btn.loading.btn-square:before,
-    .btn.loading.btn-circle:before {
-  margin-right: 0px;
+.btn.loading.btn-circle:before,
+.btn.loading.btn-square:before {
+  margin-right: 0
 }
 
-.btn.loading.btn-xl:before,
-    .btn.loading.btn-lg:before {
+.btn.loading.btn-lg:before,
+.btn.loading.btn-xl:before {
   height: 1.25rem;
-  width: 1.25rem;
+  width: 1.25rem
 }
 
 .btn.loading.btn-sm:before,
-    .btn.loading.btn-xs:before {
-  height: 0.75rem;
-  width: 0.75rem;
+.btn.loading.btn-xs:before {
+  height: .75rem;
+  width: .75rem
 }
 
-.btn-group > input[type="radio"]:checked.btn,
-  .btn-group > .btn-active {
+.btn-group>.btn-active,
+.btn-group>input[type=radio]:checked.btn {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--p) / var(--tw-border-opacity));
+  border-color: hsl(var(--p)/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--p) / var(--tw-bg-opacity));
+  background-color: hsl(var(--p)/var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
+  color: hsl(var(--pc)/var(--tw-text-opacity))
 }
 
-.btn-group > input[type="radio"]:checked.btn:focus-visible, .btn-group > .btn-active:focus-visible {
-  outline: 2px solid hsl(var(--p));
+.btn-group>.btn-active:focus-visible,
+.btn-group>input[type=radio]:checked.btn:focus-visible {
+  outline: 2px solid hsl(var(--p))
 }
 
 @keyframes button-pop {
   0% {
-    transform: scale(var(--btn-focus-scale, 0.95));
+    transform: scale(var(--btn-focus-scale, .95))
   }
 
   40% {
-    transform: scale(1.02);
+    transform: scale(1.02)
   }
 
-  100% {
-    transform: scale(1);
+  to {
+    transform: scale(1)
   }
 }
 
@@ -1070,7 +837,7 @@ html {
   border-start-start-radius: inherit;
   border-start-end-radius: inherit;
   border-end-start-radius: unset;
-  border-end-end-radius: unset;
+  border-end-end-radius: unset
 }
 
 .card :where(figure:last-child) {
@@ -1078,169 +845,159 @@ html {
   border-start-start-radius: unset;
   border-start-end-radius: unset;
   border-end-start-radius: inherit;
-  border-end-end-radius: inherit;
+  border-end-end-radius: inherit
 }
 
 .card:focus-visible {
   outline: 2px solid currentColor;
-  outline-offset: 2px;
+  outline-offset: 2px
 }
 
 .card.bordered {
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
+  border-color: hsl(var(--b2, var(--b1))/var(--tw-border-opacity))
 }
 
 .card.compact .card-body {
   padding: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: .875rem;
+  line-height: 1.25rem
 }
 
 .card.image-full :where(figure) {
   overflow: hidden;
-  border-radius: inherit;
+  border-radius: inherit
 }
 
 @keyframes checkmark {
   0% {
-    background-position-y: 5px;
+    background-position-y: 5px
   }
 
   50% {
-    background-position-y: -2px;
+    background-position-y: -2px
   }
 
-  100% {
-    background-position-y: 0;
+  to {
+    background-position-y: 0
   }
 }
 
 .label a:hover {
   --tw-text-opacity: 1;
-  color: hsl(var(--bc) / var(--tw-text-opacity));
+  color: hsl(var(--bc)/var(--tw-text-opacity))
 }
 
 .input[list]::-webkit-calendar-picker-indicator {
-  line-height: 1em;
+  line-height: 1em
 }
 
 .input-bordered {
-  --tw-border-opacity: 0.2;
+  --tw-border-opacity: 0.2
 }
 
 .input:focus {
-  outline: 2px solid hsla(var(--bc) / 0.2);
-  outline-offset: 2px;
+  outline: 2px solid hsla(var(--bc)/.2);
+  outline-offset: 2px
 }
 
 .input-disabled,
-  .input[disabled] {
+.input[disabled] {
   cursor: not-allowed;
   --tw-border-opacity: 1;
-  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
+  border-color: hsl(var(--b2, var(--b1))/var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
-  --tw-text-opacity: 0.2;
+  background-color: hsl(var(--b2, var(--b1))/var(--tw-bg-opacity));
+  --tw-text-opacity: 0.2
 }
 
-.input-disabled::-moz-placeholder, .input[disabled]::-moz-placeholder {
-  color: hsl(var(--bc) / var(--tw-placeholder-opacity));
-  --tw-placeholder-opacity: 0.2;
+.input-disabled::-moz-placeholder,
+.input[disabled]::-moz-placeholder {
+  color: hsl(var(--bc)/var(--tw-placeholder-opacity));
+  --tw-placeholder-opacity: 0.2
 }
 
 .input-disabled::placeholder,
-  .input[disabled]::placeholder {
-  color: hsl(var(--bc) / var(--tw-placeholder-opacity));
-  --tw-placeholder-opacity: 0.2;
+.input[disabled]::placeholder {
+  color: hsl(var(--bc)/var(--tw-placeholder-opacity));
+  --tw-placeholder-opacity: 0.2
 }
 
 .link:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+  outline: 2px solid #0000;
+  outline-offset: 2px
 }
 
 .link:focus-visible {
   outline: 2px solid currentColor;
-  outline-offset: 2px;
+  outline-offset: 2px
 }
 
 @keyframes progress-loading {
   50% {
-    left: 107%;
+    left: 107%
   }
 }
 
 @keyframes radiomark {
   0% {
-    box-shadow: 0 0 0 12px hsl(var(--b1)) inset, 0 0 0 12px hsl(var(--b1)) inset;
+    box-shadow: 0 0 0 12px hsl(var(--b1)) inset, 0 0 0 12px hsl(var(--b1)) inset
   }
 
   50% {
-    box-shadow: 0 0 0 3px hsl(var(--b1)) inset, 0 0 0 3px hsl(var(--b1)) inset;
+    box-shadow: 0 0 0 3px hsl(var(--b1)) inset, 0 0 0 3px hsl(var(--b1)) inset
   }
 
-  100% {
-    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;
+  to {
+    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset
   }
 }
 
 @keyframes rating-pop {
   0% {
-    transform: translateY(-0.125em);
+    transform: translateY(-.125em)
   }
 
   40% {
-    transform: translateY(-0.125em);
+    transform: translateY(-.125em)
   }
 
-  100% {
-    transform: translateY(0);
+  to {
+    transform: translateY(0)
   }
 }
 
 @keyframes toast-pop {
   0% {
-    transform: scale(0.9);
-    opacity: 0;
+    transform: scale(.9);
+    opacity: 0
   }
 
-  100% {
+  to {
     transform: scale(1);
-    opacity: 1;
+    opacity: 1
   }
 }
 
 .glass,
-  .glass:hover,
-  .glass.btn-active {
+.glass.btn-active,
+.glass:hover {
   border: none;
   -webkit-backdrop-filter: blur(var(--glass-blur, 40px));
-          backdrop-filter: blur(var(--glass-blur, 40px));
-  background-color: transparent;
-  background-image: linear-gradient(
-        135deg,
-        rgb(255 255 255 / var(--glass-opacity, 30%)) 0%,
-        rgb(0 0 0 / 0%) 100%
-      ),
-      linear-gradient(
-        var(--glass-reflex-degree, 100deg),
-        rgb(255 255 255 / var(--glass-reflex-opacity, 10%)) 25%,
-        rgb(0 0 0 / 0%) 25%
-      );
-  box-shadow: 0 0 0 1px rgb(255 255 255 / var(--glass-border-opacity, 10%))
-        inset,
-      0 0 0 2px rgb(0 0 0 / 5%);
-  text-shadow: 0 1px rgb(0 0 0 / var(--glass-text-shadow-opacity, 5%));
+  backdrop-filter: blur(var(--glass-blur, 40px));
+  background-color: initial;
+  background-image: linear-gradient(135deg, rgb(255 255 255/var(--glass-opacity, 30%)) 0, #0000 100%), linear-gradient(var(--glass-reflex-degree, 100deg), rgb(255 255 255/var(--glass-reflex-opacity, 10%)) 25%, #0000 25%);
+  box-shadow: 0 0 0 1px rgb(255 255 255/var(--glass-border-opacity, 10%)) inset, 0 0 0 2px #0000000d;
+  text-shadow: 0 1px rgb(0 0 0/var(--glass-text-shadow-opacity, 5%))
 }
 
 .input-sm {
   height: 2rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  font-size: 0.875rem;
-  line-height: 2rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  font-size: .875rem;
+  line-height: 2rem
 }
 
 .avatar.online:before {
@@ -1250,87 +1007,87 @@ html {
   display: block;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--su) / var(--tw-bg-opacity));
+  background-color: hsl(var(--su)/var(--tw-bg-opacity));
   width: 15%;
   height: 15%;
   top: 7%;
   right: 7%;
-  box-shadow: 0 0 0 2px hsl(var(--b1));
+  box-shadow: 0 0 0 2px hsl(var(--b1))
 }
 
 .btn-group .btn:not(:first-child):not(:last-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0
 }
 
 .btn-group .btn:first-child:not(:last-child) {
-  margin-top: -0px;
+  margin-top: 0;
   margin-left: -1px;
-  border-top-left-radius: var(--rounded-btn, 0.5rem);
+  border-top-left-radius: var(--rounded-btn, .5rem);
   border-top-right-radius: 0;
-  border-bottom-left-radius: var(--rounded-btn, 0.5rem);
-  border-bottom-right-radius: 0;
+  border-bottom-left-radius: var(--rounded-btn, .5rem);
+  border-bottom-right-radius: 0
 }
 
 .btn-group .btn:last-child:not(:first-child) {
   border-top-left-radius: 0;
-  border-top-right-radius: var(--rounded-btn, 0.5rem);
+  border-top-right-radius: var(--rounded-btn, .5rem);
   border-bottom-left-radius: 0;
-  border-bottom-right-radius: var(--rounded-btn, 0.5rem);
+  border-bottom-right-radius: var(--rounded-btn, .5rem)
 }
 
 .btn-group-horizontal .btn:not(:first-child):not(:last-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0
 }
 
 .btn-group-horizontal .btn:first-child:not(:last-child) {
-  margin-top: -0px;
+  margin-top: 0;
   margin-left: -1px;
-  border-top-left-radius: var(--rounded-btn, 0.5rem);
+  border-top-left-radius: var(--rounded-btn, .5rem);
   border-top-right-radius: 0;
-  border-bottom-left-radius: var(--rounded-btn, 0.5rem);
-  border-bottom-right-radius: 0;
+  border-bottom-left-radius: var(--rounded-btn, .5rem);
+  border-bottom-right-radius: 0
 }
 
 .btn-group-horizontal .btn:last-child:not(:first-child) {
   border-top-left-radius: 0;
-  border-top-right-radius: var(--rounded-btn, 0.5rem);
+  border-top-right-radius: var(--rounded-btn, .5rem);
   border-bottom-left-radius: 0;
-  border-bottom-right-radius: var(--rounded-btn, 0.5rem);
+  border-bottom-right-radius: var(--rounded-btn, .5rem)
 }
 
 .btn-group-vertical .btn:first-child:not(:last-child) {
   margin-top: -1px;
-  margin-left: -0px;
-  border-top-left-radius: var(--rounded-btn, 0.5rem);
-  border-top-right-radius: var(--rounded-btn, 0.5rem);
+  margin-left: 0;
+  border-top-left-radius: var(--rounded-btn, .5rem);
+  border-top-right-radius: var(--rounded-btn, .5rem);
   border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0
 }
 
 .btn-group-vertical .btn:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: var(--rounded-btn, 0.5rem);
-  border-bottom-right-radius: var(--rounded-btn, 0.5rem);
+  border-bottom-left-radius: var(--rounded-btn, .5rem);
+  border-bottom-right-radius: var(--rounded-btn, .5rem)
 }
 
 .card {
   margin-top: 2rem;
   margin-bottom: 2rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  background-color: rgb(55 65 81/var(--tw-bg-opacity))
 }
 
 .mt-1 {
-  margin-top: 0.25rem;
+  margin-top: .25rem
 }
 
 .mt-8 {
-  margin-top: 2rem;
+  margin-top: 2rem
 }

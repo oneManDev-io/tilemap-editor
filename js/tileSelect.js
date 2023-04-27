@@ -1,8 +1,8 @@
 const ctx = getSelectionCanvas();
 
 function tilesetSelect() {
-  // tilesetCanvas.width = tilesetImage.width * scale;
-  // tilesetCanvas.height = tilesetImage.height * scale;
+  tilesetCanvas.width = tilesetImage.width * scale;
+  tilesetCanvas.height = tilesetImage.height * scale;
 
   // Disable anti-aliasing
   ctx.imageSmoothingEnabled = false;
