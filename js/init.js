@@ -12,6 +12,9 @@ let scale = pixelUnit === 16 ? 2 : 1;
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
 
+const gridWidth = canvasWidth / (pixelUnit * scale);
+const gridHeight = canvasHeight / (pixelUnit * scale);
+
 window.onload = function () {
   // tilesetCanvas.width = tilesetImage.width * scale * 2;
   // tilesetCanvas.height = tilesetImage.height * scale * 2;
