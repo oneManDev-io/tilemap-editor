@@ -93,9 +93,13 @@ tilesetCanvas.addEventListener("click", (event) => {
 });
 
 tilesetCanvas.addEventListener("mousedown", (event) => {
+  if (!isDragging) {
+    event.preventDefault();
+    // Execute click event callback code
+    initStart(event);
+  }
   regClick = true;
   isDragging = true;
-  initStart(event);
 });
 
 selectionCanvas.addEventListener("mousemove", (event) => {

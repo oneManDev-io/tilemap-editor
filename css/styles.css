@@ -99,25 +99,30 @@ canvas,
   outline: 0 !important;
 }
 
-.brush-option:nth-child(1)::after {
+.brush-option.btn-active {
+  background: #2563eb !important;
+  border: 0;
+}
+
+.tooltip:nth-child(1) .brush-option::after {
   content: "a";
   font-size: 1.4rem;
   background: url("../assets/icons/pen-solid.svg") no-repeat;
 }
 
-.brush-option:nth-child(2)::after {
+.tooltip:nth-child(2) .brush-option::after {
   content: "a";
   font-size: 1.4rem;
   background: url("../assets/icons/eraser-solid.svg") no-repeat;
 }
 
-.brush-option:nth-child(3)::after {
+.tooltip:nth-child(3) .brush-option::after {
   content: "a";
   font-size: 1.4rem;
   background: url("../assets/icons/fill-solid.svg") no-repeat;
 }
 
-.brush-option:nth-child(4)::after {
+.tooltip:nth-child(4) .brush-option::after {
   content: "a";
   font-size: 1.4rem;
   background: url("../assets/icons/eye-dropper-solid.svg") no-repeat;

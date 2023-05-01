@@ -140,45 +140,21 @@ function addTile(key) {
 function removeTile(key) {
   delete layers[currentLayer][key];
 }
-
+// observe this code
 function fillArea(key) {
-  console.log(`Filling area with tile ${selection}`);
+  console.table(layers[currentLayer]);
+  // console.log(`Filling area with tile ${selection}`);
   const clickedTile = layers[currentLayer][key];
   if (!clickedTile) {
     console.warn("No tile found at clicked position.");
     return;
   }
-  const filled = new Set();
   const toFill = [key];
   while (toFill.length) {
     const currKey = toFill.pop();
-    const currTile = layers[currentLayer][currKey];
-    if (!currTile || currTile !== clickedTile || filled.has(currKey)) continue;
     layers[currentLayer][currKey] = selection;
-    filled.add(currKey);
-    const currXY = keyToXY(currKey);
-    const neighbors = getNeighbors(currXY.x, currXY.y);
-    toFill.push(...neighbors.map(xyToKey));
   }
   draw();
-}
-
-function getNeighbors(x, y) {
-  const neighbors = [];
-  if (x > 0) neighbors.push({ x: x - 1, y });
-  if (y > 0) neighbors.push({ x, y: y - 1 });
-  if (x < gridWidth - 1) neighbors.push({ x: x + 1, y });
-  if (y < gridHeight - 1) neighbors.push({ x, y: y + 1 });
-  return neighbors;
-}
-
-function keyToXY(key) {
-  const [x, y] = key.split(",").map(Number);
-  return { x, y };
-}
-
-function xyToKey({ x, y }) {
-  return `${x},${y}`;
 }
 
 function getTile(key) {
