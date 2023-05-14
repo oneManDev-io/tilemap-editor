@@ -58,7 +58,7 @@ canvas,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #585f6a;
   margin-bottom: 1em;
   padding: 16px;
 }
@@ -195,7 +195,7 @@ canvas,
   appearance: none;
   text-decoration: underline;
   background: transparent;
-  color: #7f808e;
+  color: #b2b5bb;
   border: 0;
   outline: 0;
   cursor: pointer;
