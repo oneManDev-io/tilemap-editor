@@ -37,17 +37,25 @@
       <div class="card_body">
         <!-- Tileset Selection Based on Image -->
         <aside>
-          <label>Tiles</label>
+          <label>Tiles</label><br>
+
+          <div class="form-control w-full max-w-xs">
+            <label class="label">
+              <span class="label-text">Pick an Image</span>
+            </label>
+            <input type="file" id="imgUpload" class="file-input file-input-sm file-input-bordered w-full max-w-xs" />
+          </div>
+
           <div class="tileset-container">
-            <div class="selectionCanvas mt-8">
+            <div class="selectionCanvas mt-4">
               <canvas id="tileset-canvas"></canvas>
             </div>
             <img draggable="false" id="tileset-source" crossorigin />
             <div class="tileset-container-selection"></div>
           </div>
+
         </aside>
         <main class="card_right-column">
-
           <canvas id="editor-canvas" width="480" height="480"></canvas>
           <p class="instructions">
             <strong>Click/Drag</strong> to paint. Hold <strong>CTRL+Z</strong> to undo,
@@ -78,7 +86,6 @@
         <aside>
           <label>Side Menu</label>
           <div class="side-menu">
-
             <div class="tools">
               <div class="btn-group brush-select">
                 <div class="tooltip tooltip-bottom" data-tip="Brush | Shortcut: B">

@@ -2,6 +2,20 @@ document.querySelectorAll(".inputWidth, .inputHeight").forEach((input) => {
   input.addEventListener("input", updateCanvasSize);
 });
 
+imgUpload.addEventListener("change", () => {
+  const file = imgUpload.files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener("load", () => {
+    const img = new Image();
+    img.src = reader.result;
+
+    tilesetImage.src = img.src;
+  });
+
+  reader.readAsDataURL(file);
+});
+
 let selection = [0, 0];
 let currentLayer = 0;
 let isMouseDown = false;

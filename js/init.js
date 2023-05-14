@@ -2,9 +2,9 @@ var tilesetCanvas = document.getElementById("tileset-canvas");
 var tilesetImage = document.getElementById("tileset-source");
 var selectionCanvas = document.querySelector(".selectionCanvas");
 var canvas = document.querySelector("#editor-canvas");
-// const imgSrc = "./assets/demo_tileset.png";
-// const imgSrc = "./assets/demo_tileset_16x16.png";
-const imgSrc = "./assets/Tilemap_1.png";
+// let imgSrc = "./assets/demo_tileset.png";
+// let imgSrc = "./assets/demo_tileset_16x16.png";
+let imgSrc = "./assets/Tilemap_1.png";
 let pixelUnit = 16;
 let scale = pixelUnit === 16 ? 2 : 1;
 
