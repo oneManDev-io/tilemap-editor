@@ -176,9 +176,8 @@ canvas,
   outline: 0;
   background: transparent;
   border: 0;
-  padding: 8px 0;
+  padding: 8px 8px 8px 0;
   display: block;
-  width: 20%;
   text-align: left;
   cursor: pointer;
 }
