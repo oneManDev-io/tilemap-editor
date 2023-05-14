@@ -14,6 +14,8 @@
 
 ## :orange_book: Tutorial
 
+[Demo](https://onemandev-io.github.io/tilemap-editor)
+
 I made a **Basic Tilemap Editor** using Vanilla **Javascript** which allows you to draw tilemaps using several tools, like for example: the **Brush Tool | B**, **Eraser Tool | E**, **Bucket Fill Tool | G**, **Eye Dropper Tool | I**, etc.
 
 **Hit (I)** to switch into **Eye Dropper** mode to pick tile from the **Editor Canvas**
