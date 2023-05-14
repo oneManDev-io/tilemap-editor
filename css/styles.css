@@ -158,13 +158,15 @@ canvas,
 
 .layers li .padlock {
   cursor: pointer;
-  background-image: url('/assets/icons/padlock.svg');
+  background-image: url('../assets/icons/lock-open.svg');
+  background-repeat: no-repeat;
   width: 24px;
   height: 24px;
 }
 
 .layers li .padlock.close {
-  background-image: url('/assets/icons/lock.svg');
+  background-image: url('../assets/icons/lock.svg');
+  background-repeat: no-repeat;
   transition: all 0.2s;
 }
 
