@@ -3,16 +3,16 @@
 ---
 
 <h3 align="center">
+  <a href="#orange_book-tutorial">Tutorial</a>&nbsp;
   <a href="#information_source-about">About</a>&nbsp;
-  <a href="#interrobang-reason">Reason</a>&nbsp;
   <a href="#rocket-technologies-used">Technologies</a>&nbsp;
-  <a href="#toolbox-issues">Issues</a>&nbsp;
-  <a href="#link-how-to-contribute">Contribute</a>&nbsp;
+  <a href="#warning-issues">Issues</a>&nbsp;
+  <a href="#hammer_and_wrench-how-to-contribute">Contribute</a>&nbsp;
 </h3>
 
 ---
 
-## :information_source: About
+## :orange_book: Tutorial
 
 I made a **Basic Tilemap Editor** using Vanilla **Javascript** which allows you to draw tilemaps using several tools, like for example: the **Brush Tool | B**, **Eraser Tool | E**, **Bucket Fill Tool | G**, **Eye Dropper Tool | I**, etc.
 
@@ -34,13 +34,13 @@ Change the layer:
   <img src="" alt="Demo IMG 4"/>
 </p>
 
-Prevent mistakes, blocking the layer:
+Prevent mistakes by blocking the layer:
 
 <p align="center">
   <img src="" alt="Demo IMG 5"/>
 </p>
 
-Undo actions (Alt+Click):
+Hold (**CTRL+Z**) to Undo actions:
 
 <p align="center">
   <img src="" alt="Demo IMG 6"/>
@@ -52,7 +52,7 @@ Export the image and clear the entire drawing:
   <img src="" alt="Demo IMG 7"/>
 </p>
 
-## :interrobang: Reason
+## :information_source: About
 
 I made this because I needed a basic tool to edit tilemaps for my basic JavaScript based games.
 
@@ -60,13 +60,13 @@ I made this because I needed a basic tool to edit tilemaps for my basic JavaScri
 
 This project was created with minimal tech like HTML Canvas and TailwindCSS with some plugins for the visuals.
 
-## :toolbox: Issues
+## :warning: Issues
 
 - **Bug:** Currently the Bucket Fill Tool only works in there's aready painted areas.
 
 - **Feature:** I'm going to add a feature that'll let the user paint with randomly generated tiles from the selection.
 
-## :link: How to Contribute
+## :hammer_and_wrench: How to Contribute
 
 You are welcome to add new features or work on existing issues:
 
