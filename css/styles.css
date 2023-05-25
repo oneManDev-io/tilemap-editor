@@ -20,11 +20,8 @@ body {
   margin: 0;
 }
 
-aside,
-header,
-ul,
-label {
-  user-select: none !important;
+aside {
+  user-select: none;
 }
 
 canvas,

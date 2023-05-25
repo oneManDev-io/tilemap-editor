@@ -4,8 +4,8 @@
   "description": "<h1 align=\"center\">TileME</h1>",
   "main": "scripts.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./css/input.css -o ./css/output.css --minify --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css": "npx tailwindcss -i ./css/input.css -o ./css/output.css --minify --watch",
+    "tsc": "tsc -w"
   },
   "author": "",
   "license": "ISC",
