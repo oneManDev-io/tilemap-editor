@@ -20,14 +20,14 @@ I made a **Basic Tilemap Editor** using Vanilla **Javascript** which allows you 
 
 **Hit (I)** to switch into **Eye Dropper** mode to pick tile from the **Editor Canvas**
 
-<p align="center">
+<p align="left">
   <img src="https://lh3.googleusercontent.com/pw/AP1GczOytU-kf08zRglchEcmU7xywwdFL1bmXVZiz9OTHde5BGp1zsIoIe82BZkMobvb4sCOaTSvoc7mLcq0oor1QZTSb9_vD3gMX2b2ZG16Bclo1q28Y7O4RgQnpbo4gBZvT-iDK9IiCr5FFLJf7bMLV7Kt=w711-h474-s-no-gm?authuser=0" alt="Demo IMG 1"/>
 </p>
 
 You can remove tiles using the **Eraser (E)**
 
-<p align="center">
-  <img src="" alt="Demo IMG 2"/>
+<p align="left">
+  <img src="https://lh3.googleusercontent.com/pw/AP1GczPeUVpSRtRX_Uh8pr49VMlmZeBQz3H06hmEaHj2ThR37T3d3gbRPJv3UG28L92ALOXwkM83difWPp8hXBpQIQjMYHO4yxG6oCjEFAUhxDDmScurpQJrtiWqEHznfbSs4hbwVncJ5bR2d3P6lRXomYjl=w711-h474-s-no-gm?authuser=0" alt="Demo IMG 2"/>
 </p>
 
 Change the layer:
